@@ -2,6 +2,7 @@
 
 const crypto = require('crypto');
 const wordlist = require('./wordlist');
+const arc4random = require('arc4random');
 let size = 6;
 
 function getKey(n) {
@@ -14,7 +15,7 @@ function getKey(n) {
     res = [];
     // We always want 5-digit keys.
     n = n || 5;
-    res.push(new Uint32Array(crypto.randomBytes(1))[0] % 6 + 1);
+    res.push(new Uint32Array(arc4random(6)));
 
     return res.concat(getKey(--n)).join('');
 }

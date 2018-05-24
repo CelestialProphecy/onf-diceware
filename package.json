@@ -30,6 +30,7 @@
     "url": "https://github.com/btoll/onf-diceware"
   },
   "dependencies": {
+    "arc4random": "^2.1.10",
     "yargs": "^3.30.0"
   },
   "devDependencies": {
@@ -42,4 +43,3 @@
     "jasmine-core": "^2.4.1"
   }
 }
-
